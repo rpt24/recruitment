@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bid Status</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Sep 12, 2019 06:00:00").getTime();
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+      // Get today's date and time
+      var now = new Date().getTime();
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      // Output the result in an element with id="demo"
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+
+    <div>
+      <h1>Candidate Ceremony - September 12th, 2019</h1>
+      <h1 id="countdown"></h1>
+      <br />
+      <br />
+    </div>
+
+    <script type="text/javascript">
+      var pnm = 40;
+      var bidGiven = 40;
+      var bidAccept = 20;
+      var bidHold = 15;
+      var bidDecline = 5;
+      document.getElementById("pnm").innerHTML = pnm;
+      document.getElementById("bidGiven").innerHTML = bidGiven;
+      document.getElementById("bidAccept").innerHTML = bidAccept;
+      document.getElementById("bidHold").innerHTML = bidHold;
+      document.getElementById("bidDecline").innerHTML = bidDecline;
+    </script>
+
+    <div class="wrapper">
+      <h1>Bid Status</h1>
+      <br />
+      <h2>Total PNMs: <script type="text/javascript">document.write(pnm)</script>
+        &ensp; Total Bids Given: <script type="text/javascript">document.write(bidGiven)</script>
+      </h2>
+      <h2> Total Bids Accepted: <script type="text/javascript">document.write(bidAccept)</script>
+        &ensp; Total Bids Declined: <script type="text/javascript">document.write(bidDecline)</script>
+        &ensp; Total Bids Held: <script type="text/javascript">document.write(bidHold)</script>
+      </h2>
+    </div>
+
+    <div class="wrapper">
+      <canvas id="myChart" width="1200" height="600"></canvas>
+      <br />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
