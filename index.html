@@ -27,7 +27,7 @@
       // If the count down is over, write some text
       if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+        document.getElementById("countdown").innerHTML = "EXPIRED";
       }
     }, 1000);
     </script>
@@ -53,17 +53,32 @@
       document.getElementById("bidDecline").innerHTML = bidDecline;
     </script>
 
-    <div class="wrapper">
-      <h1>Bid Status</h1>
-      <br />
-      <h2>Total PNMs: <script type="text/javascript">document.write(pnm)</script>
-        &ensp; Total Bids Given: <script type="text/javascript">document.write(bidGiven)</script>
-      </h2>
-      <h2> Total Bids Accepted: <script type="text/javascript">document.write(bidAccept)</script>
-        &ensp; Total Bids Declined: <script type="text/javascript">document.write(bidDecline)</script>
-        &ensp; Total Bids Held: <script type="text/javascript">document.write(bidHold)</script>
-      </h2>
-    </div>
+  <div>
+    <br />
+    <h1 style="text-decoration: underline;">Bid Status</h1>
+    <table>
+      <tr>
+        <th>MPL Number of PNMs:</th>
+        <th><script type="text/javascript">document.write(pnm)</script></th>
+      </tr>
+      <tr>
+        <th>Bids Given:</th>
+        <th><script type="text/javascript">document.write(bidGiven)</script></th>
+      </tr>
+      <tr>
+        <th>Bids Accepted:</th>
+        <th><script type="text/javascript">document.write(bidAccept)</script></th>
+      </tr>
+      <tr>
+        <th>Bids Declined:</th>
+        <th><script type="text/javascript">document.write(bidDecline)</script></th>
+      </tr>
+      <tr>
+        <th>Bids Held:</th>
+        <th><script type="text/javascript">document.write(bidHold)</script></th>
+      </tr>
+    </table>
+  </div>
 
     <div class="wrapper">
       <canvas id="myChart" width="1200" height="600"></canvas>
