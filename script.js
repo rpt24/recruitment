@@ -1,8 +1,8 @@
-var pnm = 40;
-var bidGiven = 40;
-var bidAccept = ((20/bidGiven) * 100);
-var bidHold = ((15/bidGiven) * 100);
-var bidDecline = ((5/bidGiven) * 100);
+var pnm = 24;
+var bidGiven = 1;
+var bidAccept = ((1/bidGiven) * 100); // update these vars as recruitment continues
+var bidHold = ((1/bidGiven) * 100);
+var bidDecline = ((1/bidGiven) * 100);
 
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
@@ -19,7 +19,7 @@ var myChart = new Chart(ctx, {
   options: {
     title: {
       display: true,
-      text: 'Percentage of Bids Accepted, Declined, and Held'
+      text: 'Percentage of Bids Accepted, Declined, and Held (GRAPH IS CURRENTLY NOTATIONAL DATA)'
     },
     legend: {
       display: true,
