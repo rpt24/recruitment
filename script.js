@@ -1,4 +1,4 @@
-var pnm = 28;
+var pnm = 34;
 var bidGiven = 1;
 var bidAccept = ((1/bidGiven) * 100); // update these vars as recruitment continues
 var bidHold = ((1/bidGiven) * 100);
