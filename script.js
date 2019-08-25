@@ -1,8 +1,8 @@
 var pnm = 62; // number from mpl
-var bidGiven = 8;
-var bidAccept = ((5/bidGiven) * 100); // update these vars as recruitment continues
-var bidHold = ((3/bidGiven) * 100);
-var bidDecline = ((0/bidGiven) * 100);
+var bidGiven = 13;
+var bidAccept = ((8/bidGiven) * 100); // update these vars as recruitment continues
+var bidHold = ((4/bidGiven) * 100);
+var bidDecline = ((1/bidGiven) * 100);
 
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
